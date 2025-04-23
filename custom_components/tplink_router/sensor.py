@@ -13,7 +13,7 @@ from .const import DOMAIN
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 from .coordinator import TPLinkRouterCoordinator
-from tplinkrouterc6u import Status, IPv4Status
+from .tplinkrouterc6u import Status, IPv4Status
 
 
 @dataclass

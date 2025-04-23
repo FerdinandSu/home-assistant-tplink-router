@@ -10,7 +10,7 @@ from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.config_entries import ConfigEntry
 from .const import DOMAIN, DEFAULT_USER
 import logging
-from tplinkrouterc6u import TPLinkMRClient
+from .tplinkrouterc6u import TPLinkMRClient
 from .coordinator import TPLinkRouterCoordinator
 from homeassistant.helpers import device_registry
 

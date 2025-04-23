@@ -28,6 +28,7 @@ class TPLinkButtonEntityDescription(
     ButtonEntityDescription, TPLinkRouterButtonEntityDescriptionMixin
 ):
     """A class that describes button entities for the host."""
+    pass
 
 
 BUTTON_TYPES = (
@@ -37,6 +38,13 @@ BUTTON_TYPES = (
         device_class=ButtonDeviceClass.RESTART,
         entity_category=EntityCategory.CONFIG,
         method=lambda coordinator: coordinator.reboot(),
+    ),
+    TPLinkButtonEntityDescription(
+        key="reset_pppoe",
+        name="Reset PPPoE",
+        device_class=ButtonDeviceClass.RESTART,
+        entity_category=EntityCategory.CONFIG,
+        method=lambda coordinator: coordinator.reset_pppoe(),
     ),
 )
 
